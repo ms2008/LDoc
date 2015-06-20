@@ -92,7 +92,9 @@ function markup.add_sections(F, txt)
       if title then
          -- Markdown allows trailing '#'...
          title = title:gsub('%s*#+$','')
+         -- print(title)
          sections[L] = F:add_document_section(lstrip(title))
+         -- print(sections[L])
       end
       L = L + 1
    end

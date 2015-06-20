@@ -414,7 +414,8 @@ end
 -- is not empty.
 
 function File:add_document_section(title)
-   local section = title:gsub('%W','_')
+   -- local section = title:gsub('%W','_')
+   local section = title:gsub('%s*','')
    self:new_item {
       name = section,
       class = 'section',
