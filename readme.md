@@ -61,6 +61,13 @@ function File:add_document_section(title)
    }
    return section
 end
+
+-- .\ldoc\tools.lua
+function M.extract_identifier (value)
+   -- print(value:match('([%.:%-_%S]+)(.*)$'))
+   return value:match('([%.:%-_%S]+)(.*)$')
+   -- return value:match('([%.:%-_%w]+)(.*)$')
+end
 ```
 
 

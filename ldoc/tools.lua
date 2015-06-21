@@ -182,7 +182,9 @@ end
 
 
 function M.extract_identifier (value)
-   return value:match('([%.:%-_%w]+)(.*)$')
+   -- print(value:match('([%.:%-_%S]+)(.*)$'))
+   return value:match('([%.:%-_%S]+)(.*)$')
+   -- return value:match('([%.:%-_%w]+)(.*)$')
 end
 
 function M.identifier_list (ls)
