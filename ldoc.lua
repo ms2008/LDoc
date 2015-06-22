@@ -686,6 +686,7 @@ override 'one'
 
 -- handling styling and templates --
 ldoc.css, ldoc.templ = 'ldoc.css','ldoc.ltp'
+ldco.logo = 'ldoc.png'
 
 -- special case: user wants to generate a .md file from a .lua file
 if args.ext == 'md' then

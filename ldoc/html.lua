@@ -298,6 +298,7 @@ function ldoc.source_ref (fun)
    end
 
    local css = ldoc.css
+   local logo = ldoc.logo
    ldoc.output = args.output
    ldoc.ipairs = ipairs
    ldoc.pairs = pairs
@@ -328,6 +329,7 @@ function ldoc.source_ref (fun)
 
    if css then -- has CSS been copied?
       check_file(args.dir..css, path.join(args.style,css))
+      check_file(args.dir..logo, path.join(args.style,logo))
    end
 
    -- write out the module index
@@ -349,6 +351,7 @@ function ldoc.source_ref (fun)
    -- e.g. when reading a topic the other Topics will be listed first.
    if css then
       ldoc.css = '../'..css
+      ldoc.logo = '../'..logo
    end
    for m in mods:iter() do
       local kind, lkind, modules = unpack(m)

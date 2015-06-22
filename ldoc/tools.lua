@@ -233,9 +233,9 @@ end
 
 function M.check_file (f,original)
    if not path.exists(f) or path.getmtime(original) > path.getmtime(f) then
-      local text,err = utils.readfile(original)
+      local text,err = utils.readfile(original,true)
       if text then
-         text,err = utils.writefile(f,text)
+         text,err = utils.writefile(f,text,true)
       end
       if err then
          quit("Could not copy "..original.." to "..f)
